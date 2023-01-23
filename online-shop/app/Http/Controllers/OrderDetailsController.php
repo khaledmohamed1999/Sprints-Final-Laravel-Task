@@ -18,6 +18,6 @@ class OrderDetailsController extends Controller
         $orderDetail->save();
         (new OrderController)->createOrder($orderDetail->id);
         session()->forget(['ids', 'map']);
-        return redirect('/cart');
+        return redirect('/checkout');
     }
 }

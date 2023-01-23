@@ -184,8 +184,6 @@
                                 class="nav-item nav-link {{ request()->segment(1) == 'shop' || request()->segment(1) == 'product-detail' ? 'active' : '' }}">Shop</a>
                             <a href="{{ url('cart') }}"
                                 class="nav-item nav-link {{ request()->segment(1) == 'cart' ? 'active' : '' }}">Cart</a>
-                            <a href="{{ url('checkout') }}"
-                                class="nav-item nav-link {{ request()->segment(1) == 'checkout' ? 'active' : '' }}">Checkout</a>
                             <a href="{{ url('contact') }}"
                                 class="nav-item nav-link {{ request()->segment(1) == 'contact' ? 'active' : '' }}">Contact</a>
                         </div>
