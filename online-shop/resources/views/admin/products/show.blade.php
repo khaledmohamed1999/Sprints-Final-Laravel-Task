@@ -16,6 +16,14 @@
     <label>Description</label>
     <h5>{{ $product->description }}</h5>
     <hr>
+
+    <label>Rating</label>
+    <h5>{{ $product->rating }}</h5>
+    <hr>
+
+    <label>Rating count</label>
+    <h5>{{ $product->rating_count }}</h5>
+    <hr>
     
     <label>Category</label>
     <h5>{{ $product->category->name }}</h5>
