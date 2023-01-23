@@ -8,4 +8,5 @@ Instructions:
 7: npm install
 8: Uncomment lines 32 and 33 that you previously commented
 9: php artisan key:generate
-10: php artisan serve and npm run dev
+10: php artisan storage:link
+11: php artisan serve and npm run dev
