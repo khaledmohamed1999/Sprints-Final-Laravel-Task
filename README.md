@@ -7,4 +7,5 @@ Instructions:
 6: php artisan db:seed
 7: npm install
 8: Uncomment lines 32 and 33 that you previously commented
-9: php artisan serve and npm run dev
+9: php artisan key:generate
+10: php artisan serve and npm run dev
