@@ -16,8 +16,6 @@ class OrderDetailsController extends Controller
         $orderDetail['subtotal'] = $orderDetail->calculateSubTotal($products,$quantities);
         $orderDetail['created_at'] = now();
         $orderDetail->save();
-        (new OrderController)->createOrder($orderDetail->id);
-        session()->forget(['ids', 'map']);
-        return redirect('/checkout');
+        return redirect('/checkout'.'/'.$orderDetail->id);
     }
 }

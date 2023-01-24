@@ -106,7 +106,8 @@ class HomeController extends Controller
 
     //Checkout and Cart Functions
 
-    function checkout(){
+    function checkout($id){
+        $orderDetailID = (int)$id;
         $productsMap = Session::get('map',[]);
         $products = [];
         $subTotal = 0;
@@ -120,7 +121,7 @@ class HomeController extends Controller
             }
         }
         $total = $subTotal + $shipping;
-        return view('checkout',compact('products','productsMap','subTotal','shipping','total'));
+        return view('checkout',compact('products','productsMap','subTotal','shipping','total','orderDetailID'));
     }
 
     function cart(){

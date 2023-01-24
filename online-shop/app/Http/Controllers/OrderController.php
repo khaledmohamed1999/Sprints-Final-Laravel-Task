@@ -9,11 +9,14 @@ use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
-    public function createOrder($orderDetailID){
+    public function createOrder($id){
+        $orderdetail = OrderDetail::findOrFail($id);
         $order = new Order;
-        $order['order_detail_id'] = $orderDetailID;
+        $order['order_detail_id'] = $id;
         $order['user_name'] = Auth::user()->name;
-        $order['total'] = $order->calculateTotal($orderDetailID);
+        $order['total'] = $order->calculateTotal($id);
+        session()->forget(['ids', 'map']);
         $order->save();
+        return redirect('/cart');
     }
 }
