@@ -69,19 +69,6 @@
                                 <label>ZIP Code</label>
                                 <input class="form-control" type="text" placeholder="123">
                             </div>
-                            <div class="col-md-12 form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="newaccount">
-                                    <label class="custom-control-label" for="newaccount">Create an account</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="shipto">
-                                    <label class="custom-control-label" for="shipto" data-toggle="collapse"
-                                        data-target="#shipping-address">Ship to different address</label>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="collapse mb-5" id="shipping-address">

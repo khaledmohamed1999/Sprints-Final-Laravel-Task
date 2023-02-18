@@ -112,11 +112,7 @@
         @csrf
         
         @foreach ($products as $product)
-            <input type="number" name="products[{{$product->id}}]"/>
-        @endforeach
-
-        @foreach ($products as $product)
-            <input type="number" name="quantities[{{$productsMap[$product['id']]}}]"/>
+            <input type="number" name="products[{{$product['id'].','.$productsMap[$product['id']]}}]"/>
         @endforeach
     </form>
     
